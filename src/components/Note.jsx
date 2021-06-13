@@ -2,11 +2,11 @@ import React, { Component } from "react";
 
 class Note extends Component {
   state = {};
-  render() {
+  render(props) {
     return (
       <div className="note">
-        <h1>This is for a title</h1>
-        <p>This is for the content</p>
+        <h1>{this.props.title}</h1>
+        <p>{this.props.content}</p>
       </div>
     );
   }
