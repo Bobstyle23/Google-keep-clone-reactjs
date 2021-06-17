@@ -1,19 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Footer extends Component {
-  state = {};
-
-  render() {
-    let date = new Date();
-    let currentYear = date.getFullYear();
-    return (
-      <div>
-        <footer>
-          <p>Copyright {currentYear}</p>
-        </footer>
-      </div>
-    );
-  }
+function Footer() {
+  let date = new Date();
+  let currentYear = date.getFullYear();
+  return (
+    <div>
+      <footer>
+        <p>Copyright ©️ {currentYear}</p>
+        <p>BobStyle_023 Soft production</p>
+      </footer>
+    </div>
+  );
 }
 
 export default Footer;

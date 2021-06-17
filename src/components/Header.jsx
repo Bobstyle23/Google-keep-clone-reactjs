@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
+import HighlightIcon from "@material-ui/icons/Highlight";
 
-class Header extends Component {
-  state = {};
-  render() {
-    return (
-      <div>
-        <header>
-          <h1>Keeper</h1>
-        </header>
-      </div>
-    );
-  }
+function Header() {
+  return (
+    <div>
+      <header>
+        <h1>
+          <HighlightIcon />
+          Keeper
+        </h1>
+      </header>
+    </div>
+  );
 }
 
 export default Header;
