@@ -8,6 +8,20 @@ import { useState } from "react";
 function App() {
   const [notes, setNotes] = useState([]);
 
+  const currentDate = new Date();
+  const date =
+    currentDate.getFullYear() +
+    "-" +
+    (currentDate.getMonth() + 1) +
+    "-" +
+    currentDate.getDate() +
+    "  " +
+    currentDate.getHours() +
+    ":" +
+    currentDate.getMinutes() +
+    ":" +
+    currentDate.getSeconds();
+
   function addNote(newNote) {
     setNotes((prevNotes) => {
       return [...prevNotes, newNote];
@@ -33,6 +47,7 @@ function App() {
             title={noteItem.title}
             content={noteItem.content}
             onDelete={deleteNote}
+            currentYear={date}
           />
         );
       })}

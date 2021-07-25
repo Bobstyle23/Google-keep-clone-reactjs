@@ -9,6 +9,11 @@ function Note(props) {
     <div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
+      <p>
+        {`Date:  `}
+        {props.currentYear}
+      </p>
+
       <button style={{ background: "none" }} onClick={handleClick}>
         <DeleteIcon />
       </button>
